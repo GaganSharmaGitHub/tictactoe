@@ -125,7 +125,29 @@ class Game extends Component {
                 }
             }>{this.messageSpitter()}</Text>
             <View style={styles.Board}>
-            
+            {this.state.gameBoard.map(
+                (row,rownum)=>{
+            return(    <View key={rownum} style={styles.Row}>
+                    {row.map((element,colnum)=>
+                       { return(
+                        <View key={rownum+'x'+colnum} style={styles.element}>
+                        <TouchableOpacity 
+                        style={styles.Tile}
+                        disabled={element===1||element===-1} 
+                        onPress={()=>{this.handleTap(rownum,colnum)}}
+                        >
+                        <Text style={{fontSize:'50px'}}>
+                        {this.iconSpitter(element)}
+                        </Text>
+                        </TouchableOpacity>
+                        </View>
+                           )
+                        }
+                        )
+                    }
+                </View>)
+                }
+            )}
             </View>
             <View
             style={{margin:10}}
@@ -155,6 +177,7 @@ const styles = StyleSheet.create({
       width:300,
       height:100,
       alignItems:'stretch',
+     // margin:5
     },
     element:{flex:1,
         minHeight:100,
@@ -165,7 +188,7 @@ const styles = StyleSheet.create({
         alignItems:'stretch',
         textAlign:'center',
         backgroundColor:'white'
-       
+       // margin:5
     },
     Tile:{
         flex:1,
