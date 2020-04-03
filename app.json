@@ -23,13 +23,15 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-     "ios": {
+    "ios": {
       "bundleIdentifier": "com.gagan.TicTacToe",
       "buildNumber": "1.0.0"
     },
     "android": {
       "package": "com.gagan.TicTacToe",
       "versionCode": 1
-    }
+    },
+    "description": "Classic tic tac toe game",
+    "githubUrl": "https://github.com/GaganSharmaGitHub/tictactoe"
   }
 }

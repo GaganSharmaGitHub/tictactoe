@@ -111,7 +111,15 @@ class Game extends Component {
     }
     render() {
         return (
-            <View>
+            <View style={{
+                alignItems:"stretch",
+                flex:1,
+                justifyContent:'stretch',
+            }}>
+            
+            <View
+            style={{margin:20}}
+            ></View>
             <Text style={
                 {
                     fontSize:50,
@@ -136,7 +144,7 @@ class Game extends Component {
                         disabled={element===1||element===-1} 
                         onPress={()=>{this.handleTap(rownum,colnum)}}
                         >
-                        <Text style={{fontSize:'50px'}}>
+                        <Text style={{fontSize:50}}>
                         {this.iconSpitter(element)}
                         </Text>
                         </TouchableOpacity>
@@ -177,7 +185,7 @@ const styles = StyleSheet.create({
       width:300,
       height:100,
       alignItems:'stretch',
-     // margin:5
+     
     },
     element:{flex:1,
         minHeight:100,
@@ -195,7 +203,7 @@ const styles = StyleSheet.create({
         backgroundColor:"#1ab",
         justifyContent:'center',
         alignItems:'center',
-      fontSize:'100px'
+      fontSize:50
 
     }
   });

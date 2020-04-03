@@ -7,6 +7,7 @@ return(
   <SafeAreaView>
   <View style={{
     alignItems:"center",
+    flex:1,
     justifyContent:'center',}}>
   <Game>
   </Game>
